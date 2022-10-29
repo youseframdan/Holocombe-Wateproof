@@ -1,0 +1,406 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Harmonia Sans Pro Cyr";
+  src: url(Harmonia-Sans-Font/Harmonia\ Sans\ W01\ Regular.ttf);
+}
+:root {
+  --main-color: #003f7d;
+  --main-color-alt: #ff5003;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --section-background: #f7f7f7;
+  --main-transition: 0.5s;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Harmonia Sans Pro Cyr";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.radio {
+  display: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.product-shoes {
+  padding-bottom: var(--main-padding-bottom);
+  padding-top: var(--main-padding-top);
+  position: relative;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-shoes .images {
+  position: relative;
+  max-width: 682px;
+  width: 682px;
+  min-width: 326px;
+}
+.product-shoes .images .img-product {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: darken;
+  border: 1px solid var(--section-background);
+  border-radius: 5px;
+  position: relative;
+}
+
+.product-shoes .images .main-image {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}
+.product-shoes .images .main-image img {
+  max-width: 83px;
+  mix-blend-mode: normal;
+  transition: var(--main-transition);
+}
+
+.product-shoes .images .main-image img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 15%);
+}
+.product-shoes .button-top {
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  position: absolute;
+  left: 0px;
+}
+.product-shoes .button-top .button-1,
+.product-shoes .button-top .button-2 {
+  color: white;
+  padding: 10px 0;
+  min-width: 176px;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  position: relative;
+  transition: var(--main-transition);
+}
+.product-shoes .button-top .button-1:hover,
+.product-shoes .button-top .button-2:hover {
+  width: calc(100% + 5px);
+}
+.product-shoes .button-top .button-1 {
+  background-color: var(--main-color);
+}
+.product-shoes .button-top .button-2 {
+  background: var(--main-color-alt);
+}
+.product-shoes .contant {
+  position: relative;
+  flex-direction: column;
+  padding-left: 32px;
+  flex: 1;
+}
+.product-shoes .contant .main-title {
+  color: #717171;
+  line-height: 19px;
+  font-weight: 400;
+  margin: 0;
+}
+.product-shoes .contant .title {
+  padding-top: 10px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+}
+.product-shoes .contant .rate {
+  padding-top: 17px;
+}
+.product-shoes .contant .rate .filled {
+  color: var(--main-color-alt);
+}
+.product-shoes .contant .rate .reviews {
+  padding-left: 5px;
+  font-size: 10px;
+  line-height: 12px;
+  color: #717171;
+}
+
+.product-shoes .contant .price {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  color: var(--main-color-alt);
+  padding-top: 18px;
+}
+.product-shoes .contant .price span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-decoration-line: line-through;
+  padding-left: 10px;
+  color: #717171;
+}
+.product-shoes .contant .colour {
+  padding-top: 18px;
+}
+.product-shoes .contant .colour h4 {
+  margin: 0;
+}
+.product-shoes .contant .colour .images__colour {
+  display: flex;
+  padding-top: 17px;
+  gap: 16px;
+  position: relative;
+  flex-wrap: wrap;
+}
+.product-shoes .contant .colour .images__colour img {
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: var(--main-transition);
+}
+.product-shoes .contant .colour .images__colour img:hover {
+  border-color: #000000;
+}
+.product-shoes .contant .size-guide {
+  padding-top: 25px;
+}
+.product-shoes .contant .size-guide h4 {
+  max-width: 370px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.product-shoes .contant .size-guide h4 span {
+  font-size: 12px;
+  color: #717171;
+}
+.product-shoes .contant .size-guide form {
+  display: flex;
+  padding-top: 7px;
+  gap: 8px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product-shoes .contant .size-guide form .label {
+  padding: 10px 0 9px 0;
+  width: 40px;
+  background: var(--section-background);
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  transition: var(--main-transition);
+}
+.product-shoes .contant .size-guide form .label-7,
+.product-shoes .contant .size-guide form .label-9 {
+  color: #717171;
+  background: var(--section-background);
+  border: #717171;
+  cursor: not-allowed;
+}
+
+#lang-5:checked ~ .label-5,
+#lang-6:checked ~ .label-6,
+#lang-8:checked ~ .label-8,
+#lang-10:checked ~ .label-10,
+#lang-11:checked ~ .label-11,
+#lang-12:checked ~ .label-12 {
+  background-color: #000000;
+  color: white;
+}
+#lang-7:checked ~ .label-7,
+#lang-9:checked ~ .label-9 {
+  color: #717171;
+  background: var(--section-background);
+  border: 717171;
+}
+.product-shoes .contant .quantity {
+  padding-top: 25px;
+}
+.product-shoes .contant .quantity h4 {
+  margin: 0;
+}
+.product-shoes .contant .quantity form {
+  display: flex;
+
+  width: 120px;
+  padding-top: 7px;
+}
+
+.product-shoes .contant .quantity form .value-button {
+  display: inline-block;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 11px 0;
+  background: var(--section-background);
+  color: #717171;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.product-shoes .contant .quantity form .value-button:hover {
+  cursor: pointer;
+}
+
+.product-shoes .contant .quantity form #decrease {
+  border-radius: 5px 0 0 5px;
+}
+
+.product-shoes .contant .quantity form #increase {
+  border-radius: 0 5px 5px 0;
+}
+
+.product-shoes .contant .quantity form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+.product-shoes .contant .quantity input#number {
+  text-align: center;
+  border: none;
+  margin: 0px;
+  width: 40px;
+  border: 0;
+  background: var(--section-background);
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.product-shoes .contant .button-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 32px;
+}
+.product-shoes .contant .button-2 .button-cart,
+.product-shoes .contant .button-2 .button-google {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  max-width: 480px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 10px 0;
+  gap: 4px;
+  cursor: pointer;
+}
+.product-shoes .contant .button-2 .button-cart {
+  background-color: var(--section-background);
+}
+.product-shoes .contant .button-2 .button-google {
+  background-color: #000000;
+  color: white;
+}
+.product-shoes .contant .button-2 .button-google img {
+  width: 16px;
+}
+.product-shoes .contant .button-2 .button-google span {
+  padding-bottom: 5px;
+}
+.product-shoes .contant .info {
+  padding-top: 17px;
+}
+.product-shoes .contant .info .paypal {
+}
+.product-shoes .contant .info .paypal img {
+  padding-right: 5px;
+}
+.product-shoes .contant .info .paypal a {
+  color: var(--main-color);
+  padding-left: 10px;
+}
+.product-shoes .contant .info .klarna {
+  padding-top: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+.product-shoes .contant .info .klarna img {
+  width: 55px;
+  margin: auto 8px;
+}
+.product-shoes .contant .info .klarna p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.product-shoes .contant .info .klarna a {
+  text-decoration: underline;
+}
+.product-shoes .contant .button-3  {
+  width: 100%;
+
+  padding-top: 15px;
+}
+.product-shoes .contant .button-3 button{
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  max-width: 480px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0 12px 0;
+  cursor: pointer;
+  background-color: var(--main-color-alt);
+  color: white;
+  border: none;
+  line-height: 1.3;
+
+}
